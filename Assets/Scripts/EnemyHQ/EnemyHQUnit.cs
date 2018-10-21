@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.EnemyHQ
 {
-    public class EnemyHQUnit : MonoBehaviour
+    public class EnemyHqUnit : MonoBehaviour
     {
         
         private string hqUnitId;
@@ -47,7 +47,7 @@ namespace Assets.Scripts.EnemyHQ
             hqUnitId = string.IsNullOrEmpty(hqUnitId) ? Guid.NewGuid().ToString() : hqUnitId;
             if (!soldiersSpawnPlace)
             {
-                soldiersSpawnPlace = transform;
+                soldiersSpawnPlace = this.transform;
             }
 
             CreateNewEnemy(soldiersSpawnPlace);
@@ -58,6 +58,11 @@ namespace Assets.Scripts.EnemyHQ
         /// </summary>
         private void Update()
         {
+            if (featureDevelopment.IsShouldDevelopFeatures())
+            {
+                //featureDevelopment.IncreaseFeature()
+            }
+
             if (enemySoldiers.Length > 0 && enemySoldiers.Any(x => x == null) && CanCreateNewSoldiers())
             {
                 CreateNewEnemy(soldiersSpawnPlace);                
@@ -85,8 +90,8 @@ namespace Assets.Scripts.EnemyHQ
                     z++;
                     var enemySoldier = enemySoldiers[i].GetComponent(nameof(EnemySoldier)) as EnemySoldier;
                     enemySoldier.HqUnitId = hqUnitId;
-                    enemySoldier.SoldierFeatures.MaxHealth = maxHealth;
-                    enemySoldier.SoldierFeatures.CurentHealth = maxHealth;
+                    enemySoldier.SoldierFeatures.MaxTechnicalCondition = maxHealth;
+                    enemySoldier.SoldierFeatures.CurrentTechnicalCondition = maxHealth;
                     enemySoldier.SoldierFeatures.RangeOfView = rangeOfView;
                     lastArmySpawnDate = DateTimeOffset.Now;
                 }

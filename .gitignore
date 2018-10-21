@@ -259,3 +259,12 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Assets/scene1.unity
+/AI.csproj
+/AI.Editor.Plugins.csproj
+/AI.Plugins.csproj
+/UnityPackageManager
+/Temp
+/ProjectSettings
+/Library
+/Assets/Resources

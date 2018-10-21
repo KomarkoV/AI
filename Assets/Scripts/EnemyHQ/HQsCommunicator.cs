@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace Assets.Scripts.EnemyHQ
 {
-    public class HQsCommunicator : ICommunicator
+    public class HqsCommunicator : ICommunicator
     {
         private List<GameObject> soldiers;
 
-        public HQsCommunicator(List<GameObject> soldiers)
+        public HqsCommunicator(List<GameObject> soldiers)
         {
             this.soldiers = soldiers;
         }

@@ -246,8 +246,9 @@
     <Compile Include="Assets\Scripts\DataEnemyStorage\CacheManager.cs" />
     <Compile Include="Assets\Scripts\DataEnemyStorage\Interfaces\ICacheLayer.cs" />
     <Compile Include="Assets\Scripts\EnemyFeatureDevelopment\IFeatureDevelopment.cs" />
-    <Compile Include="Assets\Scripts\EnemyHQ\EnemyHQUnit.cs" />
-    <Compile Include="Assets\Scripts\EnemyHQ\HQsCommunicator.cs" />
+    <Compile Include="Assets\Scripts\EnemyFeatureDevelopment\IFeatures.cs" />
+    <Compile Include="Assets\Scripts\EnemyHQ\EnemyHqUnit.cs" />
+    <Compile Include="Assets\Scripts\EnemyHQ\HqsCommunicator.cs" />
     <Compile Include="Assets\Scripts\EnemyHQ\HqUnitFeatures.cs" />
     <Compile Include="Assets\Scripts\EnemySoldiers\EnemySoldier.cs" />
     <Compile Include="Assets\Scripts\EnemySoldiers\SoldierBaseFeatures.cs" />
